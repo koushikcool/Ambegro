@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>For Students | Ambegro Services Pvt Ltd</title>
+        <meta name="description" content="Accelerate your career. Step into global multi-nationals. Corporate readiness training, global assessments, and guaranteed internships." />
+        <meta name="version" content="1.1.0" />
+        <link href="images/favicon.ico" rel="shortcut icon">
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="css/tiny-slider.css" rel="stylesheet" type="text/css" />
+        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <style>
+            /* Students page — vibrant orange/amber energy theme */
+            .stu-hero {
+                background: linear-gradient(150deg, #78350f 0%, #b45309 40%, #d97706 80%, #f59e0b 100%);
+                padding: 130px 0 90px;
+                position: relative;
+                overflow: hidden;
+            }
+            .stu-hero::before {
+                content: '';
+                position: absolute;
+                top: -100px;
+                right: -100px;
+                width: 500px;
+                height: 500px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            }
+            .stu-hero::after {
+                content: '';
+                position: absolute;
+                bottom: -60px;
+                left: 5%;
+                width: 350px;
+                height: 350px;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, transparent 70%);
+            }
+            .stu-tag {
+                background: rgba(255,255,255,0.15);
+                color: #fef3c7;
+                border: 1px solid rgba(255,255,255,0.25);
+                border-radius: 20px;
+                font-size: 11px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                padding: 5px 14px;
+                display: inline-block;
+                margin-bottom: 16px;
+            }
+            .stu-pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: rgba(255,255,255,0.12);
+                border: 1px solid rgba(255,255,255,0.2);
+                border-radius: 20px;
+                padding: 6px 14px;
+                font-size: 0.8rem;
+                color: rgba(255,255,255,0.9);
+            }
+
+            /* Program cards */
+            .prog-section { background: #fff; }
+            .prog-card {
+                border-radius: 16px;
+                overflow: hidden;
+                height: 100%;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border: 1px solid #f1f5f9;
+                display: flex;
+                flex-direction: column;
+            }
+            .prog-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 40px rgba(217,119,6,0.15);
+            }
+            .prog-card-header {
+                padding: 28px 28px 20px;
+                background: linear-gradient(135deg, #b45309, #d97706);
+                color: #fff;
+                position: relative;
+            }
+            .prog-card-header .prog-num {
+                position: absolute;
+                top: 16px;
+                right: 20px;
+                font-size: 3rem;
+                font-weight: 900;
+                color: rgba(255,255,255,0.12);
+                line-height: 1;
+            }
+            .prog-card-header .prog-icon {
+                width: 48px;
+                height: 48px;
+                background: rgba(255,255,255,0.2);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 14px;
+            }
+            .prog-card-header h5 { color: #fff; font-weight: 700; margin-bottom: 0; }
+            .prog-card-body {
+                padding: 24px 28px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .prog-card-body p {
+                color: #64748b;
+                font-size: 0.9rem;
+                line-height: 1.7;
+                margin-bottom: 16px;
+            }
+            .prog-card-body .feat-li {
+                font-size: 0.85rem;
+                color: #475569;
+                padding: 5px 0;
+                border-bottom: 1px solid #f8fafc;
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .prog-card-body .feat-li:last-child { border-bottom: none; }
+            .prog-card-body .feat-li .fi { color: #d97706; flex-shrink: 0; margin-top: 2px; }
+
+            /* Journey steps */
+            .journey-section { background: #fffbeb; }
+            .step-card {
+                background: #fff;
+                border-radius: 14px;
+                padding: 28px 22px;
+                text-align: center;
+                border: 1px solid #fde68a;
+                height: 100%;
+                position: relative;
+                transition: box-shadow 0.3s ease;
+            }
+            .step-card:hover { box-shadow: 0 8px 28px rgba(217,119,6,0.12); }
+            .step-card .step-num {
+                width: 52px;
+                height: 52px;
+                background: linear-gradient(135deg, #d97706, #f59e0b);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 16px;
+                font-size: 1.2rem;
+                font-weight: 900;
+                color: #fff;
+                box-shadow: 0 4px 12px rgba(217,119,6,0.3);
+            }
+            .step-card h6 { font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+            .step-card p { color: #64748b; font-size: 0.85rem; line-height: 1.6; margin: 0; }
+            .step-connector {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #d97706;
+                padding-top: 16px;
+            }
+
+            /* Advantage strip */
+            .adv-strip { background: linear-gradient(135deg, #78350f 0%, #b45309 100%); }
+            .adv-strip-card {
+                text-align: center;
+                padding: 24px 16px;
+                border-right: 1px solid rgba(255,255,255,0.12);
+            }
+            .adv-strip-card:last-child { border-right: none; }
+            .adv-strip-card .adv-num { font-size: 2rem; font-weight: 800; color: #fbbf24; }
+            .adv-strip-card .adv-lbl { font-size: 0.78rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.5px; }
+
+            /* CTA */
+            .stu-cta {
+                background: #fff;
+                padding: 80px 0;
+            }
+            .stu-cta-inner {
+                background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+                border-radius: 20px;
+                padding: 52px 48px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar Start -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <a class="logo" href="index.html">
+                    <span class="logo-light-mode">
+                        <img src="images/logo-white.png" class="l-dark" alt="Ambegro">
+                        <img src="images/logo-white.png" class="l-light" alt="Ambegro">
+                    </span>
+                    <img src="images/logo-white.png" class="logo-dark-mode" alt="Ambegro">
+                </a>
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines"><span></span><span></span><span></span></div>
+                        </a>
+                    </div>
+                </div>
+                <div id="navigation">
+                    <ul class="navigation-menu nav-right nav-light">
+                        <li><a href="index.html" class="sub-menu-item">Home</a></li>
+                        <li><a href="aboutus.html" class="sub-menu-item">About Us</a></li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-corporations.html">For Corporations</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-corporations.html#direct-placement" class="sub-menu-item">Direct Placement &amp; Lateral Hiring</a></li>
+                                <li><a href="for-corporations.html#payroll" class="sub-menu-item">Managed Payroll &amp; Vendor Services</a></li>
+                                <li><a href="for-corporations.html#bpo" class="sub-menu-item">BPO &amp; Project Outsourcing</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-institutions.html">For Institutions</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-institutions.html#campus" class="sub-menu-item">Campus Recruitment Drives</a></li>
+                                <li><a href="for-institutions.html#epo" class="sub-menu-item">External Placement Officer (EPO) Model</a></li>
+                                <li><a href="for-institutions.html#mou" class="sub-menu-item">Strategic MOUs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-students.html">For Students</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-students.html#training" class="sub-menu-item">Corporate Readiness Training</a></li>
+                                <li><a href="for-students.html#assessments" class="sub-menu-item">Global Assessments</a></li>
+                                <li><a href="for-students.html#internships" class="sub-menu-item">Guaranteed Internships</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="success-stories.html" class="sub-menu-item">Success Stories</a></li>
+                        <li><a href="contactus.html" class="sub-menu-item">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- Navbar End -->
+
+        <!-- Hero -->
+        <section class="stu-hero">
+            <div class="container position-relative" style="z-index:1;">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="stu-tag">Your Career Launchpad</div>
+                        <h1 class="text-white fw-bold mb-4" style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.2;">Accelerate Your Career.<br><span style="color:#fef3c7;">Step into Global Multi-Nationals.</span></h1>
+                        <p class="mb-4" style="color:rgba(255,255,255,0.8);font-size:1.05rem;line-height:1.8;max-width:520px;">We don't just connect you to jobs — we prepare you to walk into MNC interviews with confidence, pass global assessments, and step into roles that build careers that last decades.</p>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="stu-pill"><i data-feather="check-circle" style="width:14px;height:14px;color:#fbbf24;"></i>5,000+ Placements</span>
+                            <span class="stu-pill"><i data-feather="check-circle" style="width:14px;height:14px;color:#fbbf24;"></i>8+ Years Track Record</span>
+                            <span class="stu-pill"><i data-feather="check-circle" style="width:14px;height:14px;color:#fbbf24;"></i>100% Onboarding Success</span>
+                        </div>
+                        <a href="contactus.html" class="btn btn-light fw-bold px-4 py-3 text-uppercase" style="letter-spacing:1px;color:#b45309;">Begin Your Registration</a>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="position-relative">
+                            <img src="images/about/ab03.jpg" class="img-fluid rounded-4 shadow-lg" style="border:4px solid rgba(255,255,255,0.2);" alt="Student Career Launch">
+                            <!-- Floating badge -->
+                            <div class="position-absolute top-0 start-0 m-3 p-3 rounded-3 text-center" style="background:rgba(255,255,255,0.95);box-shadow:0 8px 24px rgba(0,0,0,0.15);min-width:110px;">
+                                <div style="font-size:1.5rem;font-weight:900;color:#d97706;">5K+</div>
+                                <div style="font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;">Careers Launched</div>
+                            </div>
+                            <div class="position-absolute bottom-0 end-0 m-3 p-3 rounded-3 text-center" style="background:rgba(255,255,255,0.95);box-shadow:0 8px 24px rgba(0,0,0,0.15);min-width:110px;">
+                                <div style="font-size:1.5rem;font-weight:900;color:#d97706;">8+</div>
+                                <div style="font-size:0.7rem;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;">Years Experience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantage Strip -->
+        <div class="adv-strip">
+            <div class="container-fluid px-0">
+                <div class="row g-0">
+                    <div class="col-6 col-md-3">
+                        <div class="adv-strip-card">
+                            <div class="adv-num">5,000+</div>
+                            <div class="adv-lbl">Careers Launched</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="adv-strip-card">
+                            <div class="adv-num">8+</div>
+                            <div class="adv-lbl">Years of Excellence</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="adv-strip-card">
+                            <div class="adv-num">100%</div>
+                            <div class="adv-lbl">Onboarding Success</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="adv-strip-card" style="border-right:none;">
+                            <div class="adv-num">3</div>
+                            <div class="adv-lbl">Programs Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programs Section -->
+        <section class="prog-section section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="badge px-3 py-2 mb-3" style="background:#fef3c7;color:#b45309;border-radius:20px;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Our Programs</span>
+                        <h2 class="fw-bold mb-3">Three Programs. One Destination: Your MNC Career.</h2>
+                        <p class="text-muted">A complete career infrastructure — from preparation to placement — designed to get you into the role you deserve.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+
+                    <!-- Program 1 -->
+                    <div class="col-lg-4 col-md-6" id="training">
+                        <div class="prog-card">
+                            <div class="prog-card-header">
+                                <span class="prog-num">01</span>
+                                <div class="prog-icon">
+                                    <i data-feather="book-open" style="width:22px;height:22px;color:#fff;"></i>
+                                </div>
+                                <h5>Corporate Readiness Training</h5>
+                            </div>
+                            <div class="prog-card-body">
+                                <p>Our flagship program transforms graduates into MNC-ready professionals — covering communication, aptitude, and the professional skills corporate interviewers are actively looking for.</p>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Business communication and professional English mastery</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Aptitude, reasoning and quantitative skills acceleration</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Group discussion and structured interview preparation</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Resume crafting with ATS optimisation for MNC portals</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 2 -->
+                    <div class="col-lg-4 col-md-6" id="assessments">
+                        <div class="prog-card">
+                            <div class="prog-card-header" style="background:linear-gradient(135deg,#92400e,#b45309);">
+                                <span class="prog-num">02</span>
+                                <div class="prog-icon">
+                                    <i data-feather="award" style="width:22px;height:22px;color:#fff;"></i>
+                                </div>
+                                <h5>Global Assessments</h5>
+                            </div>
+                            <div class="prog-card-body">
+                                <p>Complete internationally benchmarked assessments before any corporate opportunity. Your score is your credential — visible to MNC partners as a verified quality signal that accelerates shortlisting.</p>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Internationally benchmarked aptitude and domain testing</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Scores shared directly with partner corporations</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Mock assessment cycles with performance improvement coaching</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Certification-level performance recognised across MNC network</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="col-lg-4 col-md-6" id="internships">
+                        <div class="prog-card">
+                            <div class="prog-card-header" style="background:linear-gradient(135deg,#78350f,#92400e);">
+                                <span class="prog-num">03</span>
+                                <div class="prog-icon">
+                                    <i data-feather="zap" style="width:22px;height:22px;color:#fff;"></i>
+                                </div>
+                                <h5>Ambegro Hatchery Internships</h5>
+                            </div>
+                            <div class="prog-card-body">
+                                <p>A structured, paid-or-stipend internship experience embedded within partner corporate environments — building real-world exposure to MNC operations, often leading to a full-time Pre-Placement Offer (PPO).</p>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Structured internships within verified MNC partner environments</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Real project exposure with mentorship from industry professionals</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Pre-Placement Offer (PPO) pathway for high performers</div>
+                                <div class="feat-li"><span class="fi"><i class="mdi mdi-check-circle-outline"></i></span>Completion certificate with Ambegro corporate endorsement</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey Steps -->
+        <section class="journey-section section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="badge px-3 py-2 mb-3" style="background:#fde68a;color:#92400e;border-radius:20px;font-size:11px;letter-spacing:1px;text-transform:uppercase;">Your Journey</span>
+                        <h2 class="fw-bold mb-3">4 Steps to Your MNC Career</h2>
+                        <p class="text-muted">A clear, structured path from registration to offer letter — with Ambegro supporting you at every milestone.</p>
+                    </div>
+                </div>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-num">1</div>
+                            <h6>Register</h6>
+                            <p>Submit your applicant registration. Our team will contact you within 24 hours to schedule your onboarding call.</p>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-flex align-items-center px-0">
+                        <i data-feather="arrow-right" style="color:#d97706;width:20px;height:20px;"></i>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-num">2</div>
+                            <h6>Train</h6>
+                            <p>Complete the Corporate Readiness Training sprint — communication, aptitude, GDs, and interview skills.</p>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-flex align-items-center px-0">
+                        <i data-feather="arrow-right" style="color:#d97706;width:20px;height:20px;"></i>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-num">3</div>
+                            <h6>Assess</h6>
+                            <p>Complete the Global Assessment to receive your Ambegro credential score — your verified signal to hiring MNCs.</p>
+                        </div>
+                    </div>
+                    <div class="col-auto d-none d-lg-flex align-items-center px-0">
+                        <i data-feather="arrow-right" style="color:#d97706;width:20px;height:20px;"></i>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="step-card">
+                            <div class="step-num">4</div>
+                            <h6>Place</h6>
+                            <p>Get matched into your target corporate role through our MNC network — with full interview support throughout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="stu-cta">
+            <div class="container">
+                <div class="stu-cta-inner">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8 text-lg-start text-center">
+                            <h3 class="text-white fw-bold mb-2">Your MNC Career Starts Here.</h3>
+                            <p class="mb-0" style="color:rgba(255,255,255,0.85);">Join 5,000+ graduates who have already launched their careers through Ambegro's proven corporate placement ecosystem.</p>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <a href="contactus.html" class="btn btn-light fw-bold px-4 py-3 text-uppercase" style="letter-spacing:1px;color:#b45309;">Begin Your Registration</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Start -->
+        <footer class="bg-footer">
+            <div class="container">
+                <div class="row"><div class="col-12"><div class="py-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-3">
+                            <div class="text-center text-sm-start">
+                                <a href="index.html"><img src="images/logo-white.png" alt="Ambegro"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div>
+            </div>
+            <div class="py-4 footer-bar">
+                <div class="container text-center">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <div class="text-sm-start">
+                                <p class="mb-0 fw-medium">© <script>document.write(new Date().getFullYear())</script> Ambegro Services Pvt Ltd. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="https://cybrospheresolutions.com" target="_blank" class="text-reset">Cybrosphere Solutions</a>.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                            <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="linkedin" class="fea icon-sm align-middle" title="Linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="facebook" class="fea icon-sm align-middle" title="Facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="instagram" class="fea icon-sm align-middle" title="Instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="twitter" class="fea icon-sm align-middle" title="Twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/tobii.min.js"></script>
+        <script src="js/feather.min.js"></script>
+        <script src="js/plugins.init.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

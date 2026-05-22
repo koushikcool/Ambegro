@@ -1,0 +1,358 @@
+//
+// menu.scss
+//
+
+/*********************************/
+/*         Menu                  */
+/*===============================*/
+#topnav {
+    .logo {
+        color: $dark !important;
+        .l-dark,
+        .logo-light-mode {
+            display: none !important;
+        }
+        .l-light,
+        .logo-dark-mode {
+            display: inline-block !important;
+        }
+    }
+    
+    .has-submenu {
+        &.active {
+            a {
+                color: $dark;
+            }
+            .submenu {
+                li.active > a{
+                    color: $primary !important;
+                }
+            }
+            &.active {
+                .menu-arrow{
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+    .has-submenu {
+        .submenu {
+            .submenu-arrow {
+                border: solid $dark;
+                border-top-color: transparent !important;
+                border-left-color: transparent !important;
+            }
+            .has-submenu {
+                .submenu {
+                    .has-submenu {
+                        &:hover {
+                            .submenu-arrow {
+                                border-color: $primary;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    >.submenu-arrow {
+                        border-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-toggle {
+        span {
+            background-color: $dark;
+        }
+    }
+    
+    //Buy button
+    .buy-button {
+        &.menu-social {
+            li {
+                a {
+                    color: $dark;
+                }
+            }
+        }
+    }
+    .navbar-toggle {
+        &.open {
+            span {
+                &:hover {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+    .navbar-toggle {
+        &:hover, 
+        &:focus,
+        .navigation-menu > li > a:hover, 
+        &:focus {
+            background-color: transparent;
+        }
+    }
+  
+    .navigation-menu {
+        > li {
+            &:hover > a,
+            &.active > a{
+                color: $primary !important;
+            }
+            > a {
+                color: $dark;
+                background-color: transparent !important;
+                &:hover,
+                &:active{
+                    color: $primary;    
+                }
+            }
+            .submenu {
+                &.megamenu {
+                    li {
+                        .megamenu-head {
+                            color: $dark !important;
+                        }
+                    }
+                }
+            }
+        }
+        .has-submenu {
+            .menu-arrow {
+                border: solid $dark;
+                border-top-color: transparent !important;
+                border-left-color: transparent !important;
+            }
+        }
+        &.personal-menu {
+            >li {
+                &:hover > a,
+                &.active > a {
+                    &:after {
+                        background-color: rgba($primary, 0.25);
+                    }
+                }
+            }
+        }
+    }
+    &.scroll {
+        background-color: $white;
+        border: none;
+        box-shadow: $shadow;
+        .navigation-menu {
+            > li {
+                > a {
+                    color: $dark;
+                }
+                
+                > .menu-arrow {
+                    border-color: $dark;
+                }
+                &:hover, &.active {
+                    > a {
+                        color: $primary;
+                    }
+                    > .menu-arrow {
+                        border-color: $primary;
+                        border-top-color: transparent !important;
+                        border-left-color: transparent !important;
+                    }
+                } 
+            } 
+        }
+    }
+    
+    &.nav-sticky{
+        background: $white;
+        box-shadow: $shadow;
+        .navigation-menu {
+            &.nav-light {
+                > li {
+                    > a {
+                        color: $dark;
+                    }
+                    &.active {
+                        > a {
+                            color: $primary !important;
+                        }      
+                    }
+                    &:hover, 
+                    &.active {
+                        > .menu-arrow {
+                            border-color: $primary !important;
+                            border-top-color: transparent !important;
+                            border-left-color: transparent !important;
+                        }
+                        > a {
+                            color: $primary !important;
+                        }
+                    }
+                } 
+                .has-submenu {
+                    .menu-arrow {
+                        border-color: $dark; 
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    #topnav {
+        .navigation-menu {
+            > li {
+                .submenu {
+                    background-color: $white;
+                    box-shadow: $shadow;
+                    li {
+                        a {
+                            color: $dark !important;
+                            &:hover {
+                                color: $primary !important;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    > .menu-arrow {
+                        border-color: $primary;
+                        border-top-color: transparent !important;
+                        border-left-color: transparent !important;
+                    }
+                }
+                &:hover > a,
+                &.active > a{
+                    color: $primary !important;
+                }
+            }
+            &.nav-light {
+                > li {
+                    > a {
+                        color: rgba($dark, 0.5);
+                    }   
+                    &.active {
+                        > a {
+                            color: $dark !important;
+                        }      
+                    }           
+                    &:hover {
+                        > .menu-arrow {
+                            border-color: $dark !important;
+                            border-top-color: transparent !important;
+                            border-left-color: transparent !important;
+                        }
+                        > a {
+                            color: $dark !important;
+                        }
+                    }
+                } 
+                .has-submenu {
+                    .menu-arrow {
+                        border-color: rgba($dark, 0.5);
+                    }
+                    &.active {
+                        .menu-arrow{
+                            border-color: $dark !important;
+                            border-top-color: transparent !important;
+                            border-left-color: transparent !important;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}
+  
+@media (max-width: 991px) {
+    #topnav {
+        background-color: $white;
+        box-shadow: $shadow;
+        .navigation-menu {
+            > li {
+                .submenu {
+                    li {
+                        a {
+                            color: $dark !important;
+                        }
+                    }
+                    &.megamenu {
+                        > li {
+                            > ul {
+                                > li {
+                                    > span {
+                                        color: $muted;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                > a {
+                    color: $dark;
+                }
+            }
+        }
+        .navigation-menu > li > a:hover,
+        .navigation-menu > li .submenu li a:hover,
+        .navigation-menu > li.has-submenu.open > a {
+            color: $primary;
+        }
+        .menu-extras .menu-item {
+            border-color: $muted;
+        }
+    }
+    #topnav {
+        .has-submenu{
+            &.active {
+                a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    #navigation {
+        border-top: 1px solid darken($light,2%);
+        border-bottom: 1px solid darken($light,2%);
+        background-color: $white;
+    }
+}
+
+/*********************************/
+/*         Sidebar-nav            */
+/*===============================*/
+.sidebar-nav{
+    > .navbar-item {
+        .navbar-link {
+            color: $dark !important;
+        }
+    }
+}
+
+#navmenu-nav {
+    li {
+        &.active {
+            a {
+                color: $primary !important;
+            }
+        }
+        &.account-menu {
+            &.active,
+            &:hover {
+                .navbar-link {
+                    color: $white !important;
+                    background-color: $primary !important;
+                }
+            }
+        }
+    }
+}
+
+.search-bar {
+    .searchform {
+        .search-icon {
+            color: $dark;
+        }
+    }
+}

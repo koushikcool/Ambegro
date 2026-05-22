@@ -1,0 +1,121 @@
+//
+// _about.scss
+//
+
+/*********************************/
+/*         About Us              */
+/*===============================*/
+.about-left {
+    .img-one {
+        .cta-video {
+            left: 5%;
+            right: auto;
+        }
+    }
+
+    .img-two {
+        left: 0;
+        right: auto;
+    }
+}
+
+.about-right {
+    justify-content: start;
+    .img-one {
+        .cta-video {
+            right: 5%;
+            left: auto;
+        }
+    }
+
+    .img-two {
+        right: 0;
+        left: auto;
+    }
+}
+
+/*********************************/
+/*         choices Select        */
+/*===============================*/
+.filter-search-form {
+    .icons {
+        right: 12px;
+        left: auto;
+    }
+}
+@media (min-width:992px) {
+    .filter-border {
+        &:before {
+            left: 0px;
+            right: auto;
+        }
+    }
+    .registration-form {
+        .submit-btn {
+            border-radius: 0px 0 6px 6px;
+        }
+        .form-control {
+            border-radius: 6px 6px 0px 0px;
+        }
+    }
+}
+.filter-input-box,
+.filter-input-box.form-select,
+.filter-search-form .choices__inner {
+    padding: 13px 45px 15px 6px;
+}
+
+.choices[data-type*=select-one]::after {
+    left: 11.5px;
+    right: auto;
+}
+
+/*********************************/
+/*           Job Post            */
+/*===============================*/
+.job-post {
+    &.job-post-list {
+        @media (max-width: 767px) {
+            .bookmark {
+                left: 12px;
+                right: auto;
+            }
+        }
+    }
+}
+
+/*********************************/
+/*        Candidate Listing      */
+/*===============================*/
+.candidate-card {
+    .like {
+        left: 12px;
+        right: auto;
+    }
+}
+
+.ribbon {
+    &.ribbon-right {
+        left: -4px;
+        right: auto;
+        span {
+            left: -22px;
+            right: auto;
+            transform: rotate(-45deg);
+        }
+    }
+    &.ribbon-left {
+        left: auto;
+        right: -5px;
+        span {
+            left: auto;
+            right: -22px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+//Testimonial
+.swiper-slider-hero, .tns-inner, .tns-nav {
+    direction: ltr;
+}

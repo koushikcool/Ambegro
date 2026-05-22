@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>For Institutions | Ambegro Services Pvt Ltd</title>
+        <meta name="description" content="Transforming campuses into global talent launchpads. EPO Model, campus recruitment drives, and strategic MOUs for educational institutions." />
+        <meta name="version" content="1.1.0" />
+        <link href="images/favicon.ico" rel="shortcut icon">
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="css/tiny-slider.css" rel="stylesheet" type="text/css" />
+        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <style>
+            /* Institutions page — warm teal/academic theme */
+            .inst-hero {
+                background: #fff;
+                padding-top: 74px;
+                overflow: hidden;
+            }
+            .inst-hero-left {
+                background: linear-gradient(160deg, #0d9488 0%, #0f766e 50%, #134e4a 100%);
+                min-height: 520px;
+                display: flex;
+                align-items: center;
+                padding: 60px 48px;
+                position: relative;
+                overflow: hidden;
+            }
+            .inst-hero-left::before {
+                content: '';
+                position: absolute;
+                top: -60px;
+                right: -60px;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.05);
+            }
+            .inst-hero-left::after {
+                content: '';
+                position: absolute;
+                bottom: -80px;
+                left: -40px;
+                width: 240px;
+                height: 240px;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.04);
+            }
+            .inst-hero-right {
+                background: #f0fdf4;
+                min-height: 520px;
+                display: flex;
+                align-items: center;
+                padding: 60px 48px;
+            }
+            .inst-badge {
+                background: rgba(255,255,255,0.15);
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.25);
+                border-radius: 20px;
+                font-size: 11px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                padding: 5px 14px;
+                display: inline-block;
+                margin-bottom: 16px;
+            }
+            .inst-kpi {
+                background: rgba(255,255,255,0.1);
+                border: 1px solid rgba(255,255,255,0.2);
+                border-radius: 10px;
+                padding: 14px 20px;
+                text-align: center;
+                flex: 1;
+            }
+            .inst-kpi .kpi-num {
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: #fff;
+            }
+            .inst-kpi .kpi-lbl {
+                font-size: 0.72rem;
+                color: rgba(255,255,255,0.65);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            /* Timeline services */
+            .timeline-section { background: #fff; }
+            .timeline-wrapper {
+                position: relative;
+                padding-left: 50px;
+            }
+            .timeline-wrapper::before {
+                content: '';
+                position: absolute;
+                left: 18px;
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                background: linear-gradient(to bottom, #0d9488, #14b8a6, #5eead4);
+                border-radius: 2px;
+            }
+            .timeline-item {
+                position: relative;
+                padding: 0 0 48px 32px;
+            }
+            .timeline-item:last-child { padding-bottom: 0; }
+            .timeline-dot {
+                position: absolute;
+                left: -32px;
+                top: 8px;
+                width: 36px;
+                height: 36px;
+                background: #0d9488;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 0 5px rgba(13,148,136,0.15);
+                font-weight: 800;
+                color: #fff;
+                font-size: 0.85rem;
+            }
+            .timeline-card {
+                background: #fff;
+                border: 1px solid #e2e8f0;
+                border-radius: 14px;
+                padding: 28px 32px;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+                transition: box-shadow 0.3s ease, border-color 0.3s ease;
+            }
+            .timeline-card:hover {
+                box-shadow: 0 8px 32px rgba(13,148,136,0.12);
+                border-color: #0d9488;
+            }
+            .timeline-card h5 {
+                color: #0f172a;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .timeline-card p {
+                color: #64748b;
+                font-size: 0.925rem;
+                line-height: 1.7;
+                margin-bottom: 16px;
+            }
+            .timeline-card .check-li {
+                font-size: 0.875rem;
+                color: #475569;
+                padding: 4px 0;
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .timeline-card .check-li .ci { color: #0d9488; flex-shrink: 0; margin-top: 2px; }
+
+            /* Advantage grid */
+            .adv-section { background: #f0fdf4; }
+            .adv-card {
+                background: #fff;
+                border-radius: 14px;
+                padding: 28px 24px;
+                border: 1px solid #d1fae5;
+                height: 100%;
+                transition: transform 0.25s ease, box-shadow 0.25s ease;
+            }
+            .adv-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 28px rgba(13,148,136,0.1);
+            }
+            .adv-icon {
+                width: 50px;
+                height: 50px;
+                background: #ccfbf1;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 16px;
+                color: #0d9488;
+            }
+            .adv-card h6 { font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+            .adv-card p { color: #64748b; font-size: 0.875rem; line-height: 1.6; margin: 0; }
+
+            /* CTA */
+            .inst-cta {
+                background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+                padding: 64px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar Start -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <a class="logo" href="index.html">
+                    <span class="logo-light-mode">
+                        <img src="images/logo-white.png" class="l-dark" alt="Ambegro">
+                        <img src="images/logo-white.png" class="l-light" alt="Ambegro">
+                    </span>
+                    <img src="images/logo-white.png" class="logo-dark-mode" alt="Ambegro">
+                </a>
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines"><span></span><span></span><span></span></div>
+                        </a>
+                    </div>
+                </div>
+                <div id="navigation">
+                    <ul class="navigation-menu nav-right nav-light">
+                        <li><a href="index.html" class="sub-menu-item">Home</a></li>
+                        <li><a href="aboutus.html" class="sub-menu-item">About Us</a></li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-corporations.html">For Corporations</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-corporations.html#direct-placement" class="sub-menu-item">Direct Placement &amp; Lateral Hiring</a></li>
+                                <li><a href="for-corporations.html#payroll" class="sub-menu-item">Managed Payroll &amp; Vendor Services</a></li>
+                                <li><a href="for-corporations.html#bpo" class="sub-menu-item">BPO &amp; Project Outsourcing</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-institutions.html">For Institutions</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-institutions.html#campus" class="sub-menu-item">Campus Recruitment Drives</a></li>
+                                <li><a href="for-institutions.html#epo" class="sub-menu-item">External Placement Officer (EPO) Model</a></li>
+                                <li><a href="for-institutions.html#mou" class="sub-menu-item">Strategic MOUs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-students.html">For Students</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-students.html#training" class="sub-menu-item">Corporate Readiness Training</a></li>
+                                <li><a href="for-students.html#assessments" class="sub-menu-item">Global Assessments</a></li>
+                                <li><a href="for-students.html#internships" class="sub-menu-item">Guaranteed Internships</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="success-stories.html" class="sub-menu-item">Success Stories</a></li>
+                        <li><a href="contactus.html" class="sub-menu-item">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- Navbar End -->
+
+        <!-- Hero — Split Panel -->
+        <section class="inst-hero">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <div class="inst-hero-left" style="position:relative;z-index:1;">
+                        <div>
+                            <div class="inst-badge">Institutional Partnerships</div>
+                            <h1 class="text-white fw-bold mb-4" style="font-size:clamp(1.7rem,3.5vw,2.6rem);line-height:1.25;">Transforming Campuses into<br><span style="color:#5eead4;">Global Talent Launchpads.</span></h1>
+                            <p class="mb-5" style="color:rgba(255,255,255,0.75);font-size:1rem;line-height:1.8;max-width:440px;">Ambegro replaces fragmented placement processes with a year-round, enterprise-grade placement infrastructure — without adding a single permanent hire to your institution.</p>
+                            <div class="d-flex gap-3 flex-wrap">
+                                <div class="inst-kpi">
+                                    <div class="kpi-num">5,000+</div>
+                                    <div class="kpi-lbl">Students Placed</div>
+                                </div>
+                                <div class="inst-kpi">
+                                    <div class="kpi-num">8+</div>
+                                    <div class="kpi-lbl">Years Active</div>
+                                </div>
+                                <div class="inst-kpi">
+                                    <div class="kpi-num">100%</div>
+                                    <div class="kpi-lbl">Offer Fulfilment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="inst-hero-right">
+                        <div>
+                            <h4 class="fw-bold mb-4" style="color:#0f172a;">What Ambegro Delivers to Your Institution</h4>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:#fff;border:1px solid #d1fae5;box-shadow:0 2px 8px rgba(13,148,136,0.06);">
+                                    <div style="width:36px;height:36px;background:#ccfbf1;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                        <i data-feather="user-check" style="width:16px;height:16px;color:#0d9488;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Dedicated External Placement Officer</div>
+                                        <div class="text-muted" style="font-size:0.825rem;">A seasoned recruiter embedded in your campus for the full academic year.</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:#fff;border:1px solid #d1fae5;box-shadow:0 2px 8px rgba(13,148,136,0.06);">
+                                    <div style="width:36px;height:36px;background:#ccfbf1;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                        <i data-feather="briefcase" style="width:16px;height:16px;color:#0d9488;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Confirmed MNC Campus Drives</div>
+                                        <div class="text-muted" style="font-size:0.825rem;">Verified enterprise hiring managers brought directly to your campus.</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:#fff;border:1px solid #d1fae5;box-shadow:0 2px 8px rgba(13,148,136,0.06);">
+                                    <div style="width:36px;height:36px;background:#ccfbf1;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                        <i data-feather="award" style="width:16px;height:16px;color:#0d9488;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">NAAC &amp; NBA Documentation Support</div>
+                                        <div class="text-muted" style="font-size:0.825rem;">MOU records and placement statistics that strengthen accreditation applications.</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start gap-3 p-3 rounded-3" style="background:#fff;border:1px solid #d1fae5;box-shadow:0 2px 8px rgba(13,148,136,0.06);">
+                                    <div style="width:36px;height:36px;background:#ccfbf1;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                        <i data-feather="bar-chart-2" style="width:16px;height:16px;color:#0d9488;"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Real-Time Placement Analytics</div>
+                                        <div class="text-muted" style="font-size:0.825rem;">Live dashboards tracking student readiness, interview rates, and placement status.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Timeline -->
+        <section class="timeline-section section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="badge bg-soft-primary text-primary rounded-pill px-3 py-2 mb-3">Our Services</span>
+                        <h2 class="fw-bold mb-3">Three Pillars of Institutional Placement Excellence</h2>
+                        <p class="text-muted">A structured, year-round engagement model that replaces sporadic placement drives with a consistent, results-driven pipeline.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="timeline-wrapper">
+
+                            <!-- Service 1: EPO -->
+                            <div class="timeline-item" id="epo">
+                                <div class="timeline-dot">01</div>
+                                <div class="timeline-card">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div style="width:44px;height:44px;background:#ccfbf1;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                            <i data-feather="user-check" style="width:20px;height:20px;color:#0d9488;"></i>
+                                        </div>
+                                        <h5 class="mb-0">External Placement Officer (EPO) Model</h5>
+                                    </div>
+                                    <p>Ambegro embeds a dedicated External Placement Officer within your institution — a seasoned corporate recruiter who operates as an extension of your placement cell. The EPO model delivers the output of an entire placement department without institutional overhead.</p>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Dedicated EPO assigned to campus for the full academic year</div>
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Active industry outreach and corporate relationship management</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Monthly placement reports and pipeline tracking dashboards</div>
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Zero additional headcount cost for the institution</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 2: Campus Drives -->
+                            <div class="timeline-item" id="campus">
+                                <div class="timeline-dot">02</div>
+                                <div class="timeline-card">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div style="width:44px;height:44px;background:#ccfbf1;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                            <i data-feather="mic" style="width:20px;height:20px;color:#0d9488;"></i>
+                                        </div>
+                                        <h5 class="mb-0">Tier-1 Campus Recruitment Drives</h5>
+                                    </div>
+                                    <p>Ambegro organises and manages structured campus recruitment drives — bringing verified MNC hiring managers directly to your institution. Each drive is preceded by a 2-week corporate readiness sprint for participating students, significantly improving selection rates.</p>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Confirmed MNC and corporate participants for every drive</div>
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Pre-drive preparation sprints to boost placement rates</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Full event management, scheduling, and logistics handled</div>
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Post-drive onboarding follow-up and offer tracking</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service 3: MOUs -->
+                            <div class="timeline-item" id="mou">
+                                <div class="timeline-dot">03</div>
+                                <div class="timeline-card">
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div style="width:44px;height:44px;background:#ccfbf1;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                            <i data-feather="file-text" style="width:20px;height:20px;color:#0d9488;"></i>
+                                        </div>
+                                        <h5 class="mb-0">Strategic MOUs &amp; Long-Term Partnerships</h5>
+                                    </div>
+                                    <p>We formalise institutional partnerships through structured Memoranda of Understanding, creating a defined, multi-year engagement framework for placement, training, and talent development — giving institutions a strategic edge in NAAC and NBA accreditation processes.</p>
+                                    <div class="row g-2">
+                                        <div class="col-md-6">
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Formal MOU framework with defined deliverables and timelines</div>
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Multi-year engagement for consistent placement outcomes</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Documentation support for NAAC and NBA accreditation</div>
+                                            <div class="check-li"><span class="ci"><i class="mdi mdi-check-circle-outline"></i></span>Joint branding and co-branded placement event visibility</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantage Cards -->
+        <section class="adv-section section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="badge px-3 py-2 mb-3" style="background:#ccfbf1;color:#0d9488;border-radius:20px;font-size:11px;letter-spacing:1px;text-transform:uppercase;">The Ambegro Advantage</span>
+                        <h2 class="fw-bold mb-3">What Partnered Institutions Gain</h2>
+                        <p class="text-muted">A closed-loop talent preparation and placement ecosystem embedded directly into your campus calendar — from induction to offer letter.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="adv-card">
+                            <div class="adv-icon"><i data-feather="award" style="width:22px;height:22px;"></i></div>
+                            <h6>Improved NAAC Rankings</h6>
+                            <p>Documented placement partnerships, MOU records, and placement statistics strengthen accreditation applications meaningfully.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="adv-card">
+                            <div class="adv-icon"><i data-feather="users" style="width:22px;height:22px;"></i></div>
+                            <h6>Higher Enrolment Conversion</h6>
+                            <p>Institutions with proven placement records attract more quality applicants. Ambegro's model directly impacts your admissions pipeline.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="adv-card">
+                            <div class="adv-icon"><i data-feather="bar-chart-2" style="width:22px;height:22px;"></i></div>
+                            <h6>Real-Time Placement Analytics</h6>
+                            <p>Live dashboards track student readiness scores, interview performance, offer rates, and placement status across the academic year.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="adv-card">
+                            <div class="adv-icon"><i data-feather="book-open" style="width:22px;height:22px;"></i></div>
+                            <h6>Curriculum Alignment Support</h6>
+                            <p>Ambegro provides industry insights to help institutions align curriculum with emerging MNC hiring requirements.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="adv-card">
+                            <div class="adv-icon"><i data-feather="globe" style="width:22px;height:22px;"></i></div>
+                            <h6>MNC Network Access</h6>
+                            <p>Your students gain access to our verified corporate network spanning IT, Finance, FMCG, Logistics, and Core Engineering sectors.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="adv-card">
+                            <div class="adv-icon"><i data-feather="shield" style="width:22px;height:22px;"></i></div>
+                            <h6>Zero Institutional Risk</h6>
+                            <p>All Ambegro partnerships are performance-bound. If we don't deliver, you don't pay — a model built on accountability, not promises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Strip -->
+        <section class="inst-cta">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <h3 class="text-white fw-bold mb-2">Ready to Elevate Your Placement Record?</h3>
+                        <p class="mb-0" style="color:rgba(255,255,255,0.8);">Join Ambegro's growing network of institutional partners and give your students the career infrastructure they deserve.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contactus.html" class="btn btn-light fw-bold px-4 py-3 text-uppercase" style="letter-spacing:1px;color:#0d9488;">Collaborate with Ambegro</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Start -->
+        <footer class="bg-footer">
+            <div class="container">
+                <div class="row"><div class="col-12"><div class="py-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-3">
+                            <div class="text-center text-sm-start">
+                                <a href="index.html"><img src="images/logo-white.png" alt="Ambegro"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div>
+            </div>
+            <div class="py-4 footer-bar">
+                <div class="container text-center">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <div class="text-sm-start">
+                                <p class="mb-0 fw-medium">© <script>document.write(new Date().getFullYear())</script> Ambegro Services Pvt Ltd. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="https://cybrospheresolutions.com" target="_blank" class="text-reset">Cybrosphere Solutions</a>.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                            <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="linkedin" class="fea icon-sm align-middle" title="Linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="facebook" class="fea icon-sm align-middle" title="Facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="instagram" class="fea icon-sm align-middle" title="Instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="twitter" class="fea icon-sm align-middle" title="Twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/tobii.min.js"></script>
+        <script src="js/feather.min.js"></script>
+        <script src="js/plugins.init.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

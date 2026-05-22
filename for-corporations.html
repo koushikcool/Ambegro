@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>For Corporations | Ambegro Services Pvt Ltd</title>
+        <meta name="description" content="Enterprise-grade workforce architecture, scaled internationally. Direct placement, managed payroll, BPO solutions, and the Ambegro Hatchery model." />
+        <meta name="version" content="1.1.0" />
+        <link href="images/favicon.ico" rel="shortcut icon">
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="css/tiny-slider.css" rel="stylesheet" type="text/css" />
+        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <style>
+            /* Corporations page — dark enterprise theme */
+            .corp-hero {
+                background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 60%, #1e40af 100%);
+                padding: 140px 0 80px;
+                position: relative;
+                overflow: hidden;
+            }
+            .corp-hero::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                right: -10%;
+                width: 600px;
+                height: 600px;
+                background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+                border-radius: 50%;
+            }
+            .corp-hero::after {
+                content: '';
+                position: absolute;
+                bottom: -20%;
+                left: -5%;
+                width: 400px;
+                height: 400px;
+                background: radial-gradient(circle, rgba(29,78,216,0.2) 0%, transparent 70%);
+                border-radius: 50%;
+            }
+            .corp-stat-bar {
+                background: #1e40af;
+                padding: 28px 0;
+            }
+            .corp-stat-bar .stat-number {
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: #fff;
+                line-height: 1;
+            }
+            .corp-stat-bar .stat-label {
+                font-size: 0.8rem;
+                color: rgba(255,255,255,0.75);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: 4px;
+            }
+            .corp-stat-bar .stat-divider {
+                border-left: 1px solid rgba(255,255,255,0.25);
+                height: 48px;
+            }
+            .service-card-dark {
+                background: #0f172a;
+                border-radius: 12px;
+                padding: 36px 32px;
+                color: #fff;
+                height: 100%;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border: 1px solid rgba(255,255,255,0.08);
+            }
+            .service-card-dark:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                border-color: rgba(59,130,246,0.4);
+            }
+            .service-card-dark .service-num {
+                font-size: 3.5rem;
+                font-weight: 900;
+                color: rgba(59,130,246,0.2);
+                line-height: 1;
+                margin-bottom: 8px;
+            }
+            .service-card-dark .service-icon-wrap {
+                width: 52px;
+                height: 52px;
+                background: rgba(59,130,246,0.15);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            .service-card-dark h5 {
+                color: #fff;
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+            .service-card-dark p {
+                color: rgba(255,255,255,0.65);
+                font-size: 0.9rem;
+                line-height: 1.7;
+            }
+            .service-card-dark ul li {
+                color: rgba(255,255,255,0.7);
+                font-size: 0.875rem;
+                padding: 5px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+            .service-card-dark ul li:last-child { border-bottom: none; }
+            .service-card-dark ul li .check-icon {
+                color: #3b82f6;
+                margin-right: 8px;
+            }
+            .hatchery-section {
+                background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+                padding: 80px 0;
+                color: #fff;
+            }
+            .hatchery-step {
+                text-align: center;
+                padding: 24px;
+            }
+            .hatchery-step .step-circle {
+                width: 64px;
+                height: 64px;
+                background: rgba(59,130,246,0.2);
+                border: 2px solid rgba(59,130,246,0.5);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 16px;
+                font-size: 1.4rem;
+                font-weight: 800;
+                color: #60a5fa;
+            }
+            .hatchery-step h6 {
+                color: #fff;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            .hatchery-step p {
+                color: rgba(255,255,255,0.6);
+                font-size: 0.85rem;
+            }
+            .corp-cta {
+                background: #1d4ed8;
+                padding: 60px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Navbar Start -->
+        <header id="topnav" class="defaultscroll sticky">
+            <div class="container">
+                <a class="logo" href="index.html">
+                    <span class="logo-light-mode">
+                        <img src="images/logo-white.png" class="l-dark" alt="Ambegro">
+                        <img src="images/logo-white.png" class="l-light" alt="Ambegro">
+                    </span>
+                    <img src="images/logo-white.png" class="logo-dark-mode" alt="Ambegro">
+                </a>
+                <div class="menu-extras">
+                    <div class="menu-item">
+                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div class="lines">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="navigation">
+                    <ul class="navigation-menu nav-right nav-light">
+                        <li><a href="index.html" class="sub-menu-item">Home</a></li>
+                        <li><a href="aboutus.html" class="sub-menu-item">About Us</a></li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-corporations.html">For Corporations</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-corporations.html#direct-placement" class="sub-menu-item">Direct Placement &amp; Lateral Hiring</a></li>
+                                <li><a href="for-corporations.html#payroll" class="sub-menu-item">Managed Payroll &amp; Vendor Services</a></li>
+                                <li><a href="for-corporations.html#bpo" class="sub-menu-item">BPO &amp; Project Outsourcing</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-institutions.html">For Institutions</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-institutions.html#campus" class="sub-menu-item">Campus Recruitment Drives</a></li>
+                                <li><a href="for-institutions.html#epo" class="sub-menu-item">External Placement Officer (EPO) Model</a></li>
+                                <li><a href="for-institutions.html#mou" class="sub-menu-item">Strategic MOUs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu parent-menu-item">
+                            <a href="for-students.html">For Students</a><span class="menu-arrow"></span>
+                            <ul class="submenu">
+                                <li><a href="for-students.html#training" class="sub-menu-item">Corporate Readiness Training</a></li>
+                                <li><a href="for-students.html#assessments" class="sub-menu-item">Global Assessments</a></li>
+                                <li><a href="for-students.html#internships" class="sub-menu-item">Guaranteed Internships</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="success-stories.html" class="sub-menu-item">Success Stories</a></li>
+                        <li><a href="contactus.html" class="sub-menu-item">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- Navbar End -->
+
+        <!-- Hero -->
+        <section class="corp-hero">
+            <div class="container position-relative" style="z-index:1;">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <span class="badge text-uppercase mb-3 px-3 py-2" style="background:rgba(59,130,246,0.2);color:#60a5fa;letter-spacing:2px;font-size:11px;border:1px solid rgba(59,130,246,0.3);">Corporate Solutions</span>
+                        <h1 class="text-white fw-bold mb-4" style="font-size:clamp(1.8rem,4vw,3rem);line-height:1.2;">Enterprise-Grade Workforce Architecture.<br><span style="color:#60a5fa;">Scaled Internationally.</span></h1>
+                        <p class="mb-4" style="color:rgba(255,255,255,0.7);font-size:1.05rem;line-height:1.8;max-width:560px;">Ambegro operates as your embedded talent acquisition partner — not a traditional vendor. We deliver precision-sourced, corporate-ready professionals across IT, Non-IT, and Core Engineering verticals with a Pan-South India sourcing network.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="contactus.html" class="btn btn-primary px-4 py-2 fw-semibold">Become a Vendor Partner</a>
+                            <a href="#direct-placement" class="btn px-4 py-2 fw-semibold" style="background:rgba(255,255,255,0.08);color:#fff;border:1px solid rgba(255,255,255,0.2);">View Services</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="p-3 rounded-3 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);">
+                                    <i data-feather="users" style="color:#60a5fa;width:28px;height:28px;"></i>
+                                    <div class="text-white fw-bold mt-2 fs-5">5,000+</div>
+                                    <div style="color:rgba(255,255,255,0.6);font-size:0.75rem;">Placed Candidates</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 rounded-3 text-center mt-4" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);">
+                                    <i data-feather="clock" style="color:#60a5fa;width:28px;height:28px;"></i>
+                                    <div class="text-white fw-bold mt-2 fs-5">8+ Years</div>
+                                    <div style="color:rgba(255,255,255,0.6);font-size:0.75rem;">Industry Expertise</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 rounded-3 text-center" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);">
+                                    <i data-feather="map-pin" style="color:#60a5fa;width:28px;height:28px;"></i>
+                                    <div class="text-white fw-bold mt-2 fs-5">Pan-South</div>
+                                    <div style="color:rgba(255,255,255,0.6);font-size:0.75rem;">India Network</div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 rounded-3 text-center mt-4" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);">
+                                    <i data-feather="check-circle" style="color:#60a5fa;width:28px;height:28px;"></i>
+                                    <div class="text-white fw-bold mt-2 fs-5">100%</div>
+                                    <div style="color:rgba(255,255,255,0.6);font-size:0.75rem;">Onboarding Success</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stat Bar -->
+        <div class="corp-stat-bar">
+            <div class="container">
+                <div class="row justify-content-center text-center g-0">
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="stat-number">5,000+</div>
+                        <div class="stat-label">Careers Launched</div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex align-items-center px-3">
+                        <div class="corp-stat-bar .stat-divider" style="border-left:1px solid rgba(255,255,255,0.25);height:48px;"></div>
+                    </div>
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex align-items-center px-3">
+                        <div style="border-left:1px solid rgba(255,255,255,0.25);height:48px;"></div>
+                    </div>
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Onboarding Success</div>
+                    </div>
+                    <div class="col-auto d-none d-md-flex align-items-center px-3">
+                        <div style="border-left:1px solid rgba(255,255,255,0.25);height:48px;"></div>
+                    </div>
+                    <div class="col-6 col-md-3 py-2">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Industry Verticals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <section class="section" style="background:#f8fafc;">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="badge bg-soft-primary text-primary rounded-pill px-3 py-2 mb-3">Our Solutions</span>
+                        <h2 class="fw-bold mb-3">Three Pillars of Enterprise Talent Architecture</h2>
+                        <p class="text-muted">End-to-end workforce solutions engineered for scale, speed, and compliance across every corporate function.</p>
+                    </div>
+                </div>
+
+                <!-- Service 1 -->
+                <div id="direct-placement" class="row g-4 align-items-stretch mb-4">
+                    <div class="col-lg-5">
+                        <div class="h-100 d-flex align-items-center">
+                            <img src="images/work/01.jpg" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit:cover;max-height:340px;" alt="Direct Placement">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="service-card-dark h-100">
+                            <div class="service-num">01</div>
+                            <div class="service-icon-wrap">
+                                <i data-feather="target" style="color:#60a5fa;width:22px;height:22px;"></i>
+                            </div>
+                            <h5>Vendor Alliances &amp; Lateral Sourcing</h5>
+                            <p>We function as a Tier-1 staffing vendor with direct sourcing capabilities for mid-level to senior lateral hiring across IT/Software, Banking &amp; Finance, FMCG, Logistics, and Core Engineering.</p>
+                            <ul class="list-unstyled mt-3 mb-0">
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Direct placement across IT, Non-IT, and Core MNC verticals</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Pan-South India sourcing pipeline with pre-screened talent</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Lateral hiring for mid-to-senior roles with rapid turnaround</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Dedicated account management and replacement guarantees</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div id="payroll" class="row g-4 align-items-stretch mb-4">
+                    <div class="col-lg-7 order-lg-1 order-2">
+                        <div class="service-card-dark h-100">
+                            <div class="service-num">02</div>
+                            <div class="service-icon-wrap">
+                                <i data-feather="briefcase" style="color:#60a5fa;width:22px;height:22px;"></i>
+                            </div>
+                            <h5>Managed Payroll &amp; 3rd Party Payroll</h5>
+                            <p>Complete payroll management solutions including compliance, statutory filing, and 3rd party payroll models that let enterprises scale headcount without adding operational overhead.</p>
+                            <ul class="list-unstyled mt-3 mb-0">
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Full payroll processing with PF, ESI, and TDS compliance</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>3rd party payroll models to reduce permanent headcount risk</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Contract staffing with Ambegro as Employer of Record</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Scalable vendor management for large workforce deployments</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-lg-2 order-1">
+                        <div class="h-100 d-flex align-items-center">
+                            <img src="images/work/02.jpg" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit:cover;max-height:340px;" alt="Managed Payroll">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div id="bpo" class="row g-4 align-items-stretch">
+                    <div class="col-lg-5">
+                        <div class="h-100 d-flex align-items-center">
+                            <img src="images/work/03.jpg" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit:cover;max-height:340px;" alt="BPO Project Operations">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="service-card-dark h-100">
+                            <div class="service-num">03</div>
+                            <div class="service-icon-wrap">
+                                <i data-feather="layers" style="color:#60a5fa;width:22px;height:22px;"></i>
+                            </div>
+                            <h5>BPO &amp; Project Operations</h5>
+                            <p>Outsource your back-office operations, customer engagement, or project-based functions to our managed delivery teams. We assemble, train, and deploy project-specific squads at enterprise pace.</p>
+                            <ul class="list-unstyled mt-3 mb-0">
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Managed BPO delivery for data, support, and operations functions</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Project-specific team assembly with rapid deployment timelines</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>End-to-end accountability with defined SLAs and KPIs</li>
+                                <li><span class="check-icon"><i class="mdi mdi-check-circle-outline"></i></span>Cost-optimised outsourcing with zero recruitment overhead</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hatchery Section -->
+        <section class="hatchery-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-7 text-center">
+                        <span class="badge px-3 py-2 mb-3" style="background:rgba(59,130,246,0.2);color:#60a5fa;border:1px solid rgba(59,130,246,0.3);font-size:11px;letter-spacing:1px;">Exclusive to Ambegro</span>
+                        <h2 class="text-white fw-bold mb-3">The Ambegro Hatchery Model</h2>
+                        <p style="color:rgba(255,255,255,0.65);">Pre-book cohorts of trained, assessment-validated candidates 90 days before deployment — eliminating last-minute hiring gaps and reducing onboarding time.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-3 col-6">
+                        <div class="hatchery-step">
+                            <div class="step-circle">90</div>
+                            <h6>Days Pre-Booking</h6>
+                            <p>Reserve trained cohorts up to 90 days before your deployment date.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="hatchery-step">
+                            <div class="step-circle"><i data-feather="check" style="width:20px;height:20px;"></i></div>
+                            <h6>Validated Talent</h6>
+                            <p>Every candidate passes global aptitude and domain assessments.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="hatchery-step">
+                            <div class="step-circle"><i data-feather="trending-up" style="width:20px;height:20px;"></i></div>
+                            <h6>Culture-Aligned</h6>
+                            <p>Candidates are briefed on your operational culture before day one.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="hatchery-step">
+                            <div class="step-circle"><i data-feather="map-pin" style="width:20px;height:20px;"></i></div>
+                            <h6>Pan-South India</h6>
+                            <p>Sourcing across TS, AP, Tamil Nadu, Karnataka, and Kerala.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Strip -->
+        <section class="corp-cta">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <h3 class="text-white fw-bold mb-2">Ready to Build Your Workforce Pipeline?</h3>
+                        <p class="mb-0" style="color:rgba(255,255,255,0.8);">Join our growing network of enterprise partners and gain exclusive access to Ambegro's precision-sourced talent pool.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contactus.html" class="btn btn-light fw-bold px-4 py-3 text-uppercase" style="letter-spacing:1px;">Become a Vendor Partner</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Start -->
+        <footer class="bg-footer">
+            <div class="container">
+                <div class="row"><div class="col-12"><div class="py-5">
+                    <div class="row align-items-center">
+                        <div class="col-sm-3">
+                            <div class="text-center text-sm-start">
+                                <a href="index.html"><img src="images/logo-white.png" alt="Ambegro"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div></div></div>
+            </div>
+            <div class="py-4 footer-bar">
+                <div class="container text-center">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <div class="text-sm-start">
+                                <p class="mb-0 fw-medium">© <script>document.write(new Date().getFullYear())</script> Ambegro Services Pvt Ltd. Design with <i class="mdi mdi-heart text-danger"></i> by <a href="https://cybrospheresolutions.com" target="_blank" class="text-reset">Cybrosphere Solutions</a>.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                            <ul class="list-unstyled social-icon foot-social-icon text-sm-end mb-0">
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="linkedin" class="fea icon-sm align-middle" title="Linkedin"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="facebook" class="fea icon-sm align-middle" title="Facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="instagram" class="fea icon-sm align-middle" title="Instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#" class="rounded"><i data-feather="twitter" class="fea icon-sm align-middle" title="Twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top rounded fs-5"><i data-feather="arrow-up" class="fea icon-sm align-middle"></i></a>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/tobii.min.js"></script>
+        <script src="js/feather.min.js"></script>
+        <script src="js/plugins.init.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
